@@ -1,0 +1,28 @@
+{
+  "name": "GraphQLServer",
+  "version": "1.0.0",
+  "description": "GraphQLServer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvasqu09/GraphQLServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvasqu09/GraphQLServer/issues"
+  },
+  "homepage": "https://github.com/cvasqu09/GraphQLServer#readme",
+  "dependencies": {
+    "apollo-server": "^2.2.2",
+    "axios": "^0.18.0",
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0"
+  }
+}
