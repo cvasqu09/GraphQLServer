@@ -1,4 +1,10 @@
-const { ApolloServer, gql } = require('apollo-server');
+import { ApolloServer, gql } from 'apollo-server';
+import { QueryType as Query } from './schemas/query'
+import { ImageType } from './schemas/image'
+import { PlaylistType } from './schemas/playlist'
+import { TrackType } from './schemas/track'
+import { ArtistType } from './schemas/artist'
+
 const axios = require('axios');
 const util = require('util');
 require('dotenv').config();
@@ -12,40 +18,13 @@ const options = {
 
 // Type definitions define the "shape" of your data and specify
 // which ways the data can be fetched from the GraphQL server.
-const typeDefs = gql`
-  type Playlist {
-    name: String!
-    images: [Image]
-    tracks: [Track]
-  }
-
-  type Image {
-    height: Int
-    url: String
-    width: Int
-  }
-
-  type Track {
-    name: String!
-    popularity: Int
-    artists: [Artist]
-  }
-
-  type Artist {
-    name: String
-    genres: [String]
-  }
-
-  type Query {
-    playlists: [Playlist]
-  }
-`;
+const typeDefs = [PlaylistType, ImageType, TrackType, ArtistType, Query];
 
 // Resolvers define the technique for fetching the types in the
 // schema.
 const resolvers = {
   Playlist: {
-     tracks: async(playlist) => {
+     tracks: async(playlist: any) => {
       // const tracksUrl = playlist.tracks.href;
       // const result = await axios.get(tracksUrl, options);
       const result = await axios.get(`${baseUrl}/tracks`);
@@ -54,12 +33,12 @@ const resolvers = {
   },
 
   Track: {
-    name: (trackItem) => {
+    name: (trackItem: any) => {
       return trackItem.track.name;
     },
-    popularity: (trackItem => {
+    popularity: (trackItem: any) => {
       return trackItem.track.popularity
-    }),
+    },
     artists: async() => {
       const result = await axios.get(`${baseUrl}/artists`);
       console.log(result.data);
@@ -84,6 +63,6 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 // This `listen` method launches a web-server.  Existing apps
 // can utilize middleware options, which we'll discuss later.
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+server.listen().then(() => {
+  console.log(`🚀  Server ready`);
 });
