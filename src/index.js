@@ -4,8 +4,10 @@ const util = require('util');
 require('dotenv').config();
 
 const bearerToken = process.env.BEARER_TOKEN;
+const baseUrl = process.env.BASE_API_URL
 const options = {
-  headers: { 'Authorization': 'Bearer ' + bearerToken }
+  headers: { 'Authorization': 'Bearer ' + bearerToken, 'Content-Type': 'application/json', 'Accept': 'application/json' }
+
 }
 
 // Type definitions define the "shape" of your data and specify
@@ -44,8 +46,9 @@ const typeDefs = gql`
 const resolvers = {
   Playlist: {
      tracks: async(playlist) => {
-      const tracksUrl = playlist.tracks.href;
-      const result = await axios.get(tracksUrl, options);
+      // const tracksUrl = playlist.tracks.href;
+      // const result = await axios.get(tracksUrl, options);
+      const result = await axios.get(`${baseUrl}/tracks`);
       return result.data.items;
     }
   },
@@ -66,15 +69,17 @@ const resolvers = {
     genres: async function(artist) {
       // const artistUrl = artist.href;
       // const result = await axios.get(artistUrl, options);
-      axios.get(artist.href, options).then(res => res.data.genres);
+      // axios.get(artist.href, options).then(res => res.data.genres);
       // console.log(result.data.genres);
       // return result.data.genres;
     }
   },
 
   Query: {
-    playlists: async() => {
-      const result = await axios.get('https://api.spotify.com/v1/me/playlists', options);
+    playlists: async function() {
+      console.log(`${baseUrl}/playlists`);
+      const result = await axios.get(`${baseUrl}/playlists`, options);
+      // console.log(result);
       return result.data.items;
     }
   },

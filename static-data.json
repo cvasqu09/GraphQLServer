@@ -1,0 +1,312 @@
+{
+  "playlists": {
+      "href": "https://api.spotify.com/v1/users/cvasqu09/playlists?offset=0&limit=20",
+      "items": [
+          {
+              "collaborative": false,
+              "external_urls": {
+                  "spotify": "https://open.spotify.com/playlist/1oTVo3neTskMibNvRRVfAC"
+              },
+              "href": "https://api.spotify.com/v1/playlists/1oTVo3neTskMibNvRRVfAC",
+              "id": "1oTVo3neTskMibNvRRVfAC",
+              "images": [
+                  {
+                      "height": 640,
+                      "url": "https://i.scdn.co/image/50b8bd06900cc2542c78a6446657f77d7aaba96e",
+                      "width": 640
+                  }
+              ],
+              "name": "ChillStep",
+              "owner": {
+                  "display_name": "cvasqu09",
+                  "external_urls": {
+                      "spotify": "https://open.spotify.com/user/cvasqu09"
+                  },
+                  "href": "https://api.spotify.com/v1/users/cvasqu09",
+                  "id": "cvasqu09",
+                  "type": "user",
+                  "uri": "spotify:user:cvasqu09"
+              },
+              "primary_color": null,
+              "public": true,
+              "snapshot_id": "NywzZWM5NjNkZDQ4MmQyMjJlMThjZWM2ZDY5ZWQ5OGYwZGFlOTg4ZDE0",
+              "tracks": {
+                  "href": "https://api.spotify.com/v1/playlists/1oTVo3neTskMibNvRRVfAC/tracks",
+                  "total": 5
+              },
+              "type": "playlist",
+              "uri": "spotify:user:cvasqu09:playlist:1oTVo3neTskMibNvRRVfAC"
+          }
+      ]
+  },
+  "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/1oTVo3neTskMibNvRRVfAC/tracks?offset=0&limit=100",
+      "items": [
+          {
+              "added_at": "2018-08-09T14:50:14Z",
+              "added_by": {
+                  "external_urls": {
+                      "spotify": "https://open.spotify.com/user/cvasqu09"
+                  },
+                  "href": "https://api.spotify.com/v1/users/cvasqu09",
+                  "id": "cvasqu09",
+                  "type": "user",
+                  "uri": "spotify:user:cvasqu09"
+              },
+              "is_local": false,
+              "primary_color": null,
+              "track": {
+                  "album": {
+                      "album_type": "single",
+                      "artists": [
+                          {
+                              "external_urls": {
+                                  "spotify": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/45eNHdiiabvmbp4erw26rg",
+                              "id": "45eNHdiiabvmbp4erw26rg",
+                              "name": "Illenium",
+                              "type": "artist",
+                              "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
+                          }
+                      ],
+                      "available_markets": [
+                          "AD",
+                          "AR",
+                          "AT",
+                          "AU",
+                          "BE",
+                          "BG",
+                          "BO",
+                          "BR",
+                          "CA",
+                          "CH",
+                          "CL",
+                          "CO",
+                          "CR",
+                          "CY",
+                          "CZ",
+                          "DE",
+                          "DK",
+                          "DO",
+                          "EC",
+                          "EE",
+                          "ES",
+                          "FI",
+                          "FR",
+                          "GB",
+                          "GR",
+                          "GT",
+                          "HK",
+                          "HN",
+                          "HU",
+                          "ID",
+                          "IE",
+                          "IL",
+                          "IS",
+                          "IT",
+                          "JP",
+                          "LI",
+                          "LT",
+                          "LU",
+                          "LV",
+                          "MC",
+                          "MT",
+                          "MX",
+                          "MY",
+                          "NI",
+                          "NL",
+                          "NO",
+                          "NZ",
+                          "PA",
+                          "PE",
+                          "PH",
+                          "PL",
+                          "PT",
+                          "PY",
+                          "RO",
+                          "SE",
+                          "SG",
+                          "SK",
+                          "SV",
+                          "TH",
+                          "TR",
+                          "TW",
+                          "US",
+                          "UY",
+                          "VN",
+                          "ZA"
+                      ],
+                      "external_urls": {
+                          "spotify": "https://open.spotify.com/album/1l6drqanZEtcU357VyQoSy"
+                      },
+                      "href": "https://api.spotify.com/v1/albums/1l6drqanZEtcU357VyQoSy",
+                      "id": "1l6drqanZEtcU357VyQoSy",
+                      "images": [
+                          {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/50b8bd06900cc2542c78a6446657f77d7aaba96e",
+                              "width": 640
+                          },
+                          {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/79ad1d3ab1b1d0e4d849eb5a7f160667861411e1",
+                              "width": 300
+                          },
+                          {
+                              "height": 64,
+                              "url": "https://i.scdn.co/image/8a1fa7aca3fbf9081f9403ae49adf28d615e5fd7",
+                              "width": 64
+                          }
+                      ],
+                      "name": "I'll Be Your Reason",
+                      "release_date": "2015-06-15",
+                      "release_date_precision": "day",
+                      "total_tracks": 1,
+                      "type": "album",
+                      "uri": "spotify:album:1l6drqanZEtcU357VyQoSy"
+                  },
+                  "artists": [
+                      {
+                          "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/45eNHdiiabvmbp4erw26rg",
+                          "id": "45eNHdiiabvmbp4erw26rg",
+                          "name": "Illenium",
+                          "type": "artist",
+                          "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
+                      }
+                  ],
+                  "available_markets": [
+                      "AD",
+                      "AR",
+                      "AT",
+                      "AU",
+                      "BE",
+                      "BG",
+                      "BO",
+                      "BR",
+                      "CA",
+                      "CH",
+                      "CL",
+                      "CO",
+                      "CR",
+                      "CY",
+                      "CZ",
+                      "DE",
+                      "DK",
+                      "DO",
+                      "EC",
+                      "EE",
+                      "ES",
+                      "FI",
+                      "FR",
+                      "GB",
+                      "GR",
+                      "GT",
+                      "HK",
+                      "HN",
+                      "HU",
+                      "ID",
+                      "IE",
+                      "IL",
+                      "IS",
+                      "IT",
+                      "JP",
+                      "LI",
+                      "LT",
+                      "LU",
+                      "LV",
+                      "MC",
+                      "MT",
+                      "MX",
+                      "MY",
+                      "NI",
+                      "NL",
+                      "NO",
+                      "NZ",
+                      "PA",
+                      "PE",
+                      "PH",
+                      "PL",
+                      "PT",
+                      "PY",
+                      "RO",
+                      "SE",
+                      "SG",
+                      "SK",
+                      "SV",
+                      "TH",
+                      "TR",
+                      "TW",
+                      "US",
+                      "UY",
+                      "VN",
+                      "ZA"
+                  ],
+                  "disc_number": 1,
+                  "duration_ms": 219882,
+                  "episode": false,
+                  "explicit": false,
+                  "external_ids": {
+                      "isrc": "USAT21501741"
+                  },
+                  "external_urls": {
+                      "spotify": "https://open.spotify.com/track/0sBW1wri8FQX4PsCmyF0Pm"
+                  },
+                  "href": "https://api.spotify.com/v1/tracks/0sBW1wri8FQX4PsCmyF0Pm",
+                  "id": "0sBW1wri8FQX4PsCmyF0Pm",
+                  "is_local": false,
+                  "name": "I'll Be Your Reason",
+                  "popularity": 46,
+                  "preview_url": "https://p.scdn.co/mp3-preview/e56e87ccbc270a4d3bf7d9ae1c2731c7f5501bd0?cid=55edbbef01c64973b95d7643bd9d41e4",
+                  "track": true,
+                  "track_number": 1,
+                  "type": "track",
+                  "uri": "spotify:track:0sBW1wri8FQX4PsCmyF0Pm"
+              },
+              "video_thumbnail": {
+                  "url": null
+              }
+          }
+      ]
+  },
+  "artist": {
+      "external_urls": {
+          "spotify": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
+      },
+      "followers": {
+          "href": null,
+          "total": 447905
+      },
+      "genres": [
+          "edm",
+          "pop",
+          "tropical house"
+      ],
+      "href": "https://api.spotify.com/v1/artists/45eNHdiiabvmbp4erw26rg",
+      "id": "45eNHdiiabvmbp4erw26rg",
+      "images": [
+          {
+              "height": 640,
+              "url": "https://i.scdn.co/image/13f93bc1aa54c82eb6deed1637b5049150cc9379",
+              "width": 640
+          },
+          {
+              "height": 320,
+              "url": "https://i.scdn.co/image/68134577a53a5f57662ac26d0cf219404cf51a31",
+              "width": 320
+          },
+          {
+              "height": 160,
+              "url": "https://i.scdn.co/image/8ab09f80f345cdfe95b02042eb6c8683ab5369a8",
+              "width": 160
+          }
+      ],
+      "name": "ILLENIUM",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
+  }
+}
