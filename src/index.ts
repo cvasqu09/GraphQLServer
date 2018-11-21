@@ -1,23 +1,18 @@
-import { ApolloServer, gql } from 'apollo-server';
+import { ApolloServer } from 'apollo-server';
 import { QueryType as Query } from './schemas/query'
 import { ImageType } from './schemas/image'
 import { PlaylistType } from './schemas/playlist'
 import { TrackType } from './schemas/track'
 import { ArtistType } from './schemas/artist'
-
 const axios = require('axios');
-const util = require('util');
 require('dotenv').config();
 
 const bearerToken = process.env.BEARER_TOKEN;
 const baseUrl = process.env.BASE_API_URL
 const options = {
   headers: { 'Authorization': 'Bearer ' + bearerToken, 'Content-Type': 'application/json', 'Accept': 'application/json' }
-
 }
 
-// Type definitions define the "shape" of your data and specify
-// which ways the data can be fetched from the GraphQL server.
 const typeDefs = [PlaylistType, ImageType, TrackType, ArtistType, Query];
 
 // Resolvers define the technique for fetching the types in the
