@@ -272,7 +272,7 @@
           }
       ]
   },
-  "artist": {
+  "artists": [{
       "external_urls": {
           "spotify": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
       },
@@ -308,5 +308,40 @@
       "popularity": 75,
       "type": "artist",
       "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
-  }
+  },
+  {
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5ooIuCvSBl6Eo4cHixvB7x"
+    },
+    "followers": {
+        "href": null,
+        "total": 1359
+    },
+    "genres": [
+        "indie electro-pop"
+    ],
+    "href": "https://api.spotify.com/v1/artists/5ooIuCvSBl6Eo4cHixvB7x",
+    "id": "5ooIuCvSBl6Eo4cHixvB7x",
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/8caedcacc208217dfca6dec6aaedb31f5e86a815",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/e2e127d1c3d28780837309ff6777a8919c8f007a",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/ff2e19801ba5a6181592dffee5d6ebfe5e399fd2",
+            "width": 160
+        }
+    ],
+    "name": "Emilie Brandt",
+    "popularity": 49,
+    "type": "artist",
+    "uri": "spotify:artist:5ooIuCvSBl6Eo4cHixvB7x"
+  }]
 }

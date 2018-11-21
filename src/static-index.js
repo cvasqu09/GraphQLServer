@@ -60,18 +60,10 @@ const resolvers = {
     popularity: (trackItem => {
       return trackItem.track.popularity
     }),
-    artists: (trackItem) => {
-      return trackItem.track.artists;
-    }
-  },
-
-  Artist: {
-    genres: async function(artist) {
-      // const artistUrl = artist.href;
-      // const result = await axios.get(artistUrl, options);
-      // axios.get(artist.href, options).then(res => res.data.genres);
-      // console.log(result.data.genres);
-      // return result.data.genres;
+    artists: async() => {
+      const result = await axios.get(`${baseUrl}/artists`);
+      console.log(result.data);
+      return result.data
     }
   },
 
