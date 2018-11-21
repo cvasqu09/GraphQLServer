@@ -4,6 +4,9 @@ const util = require('util');
 require('dotenv').config();
 
 const bearerToken = process.env.BEARER_TOKEN;
+const options = {
+  headers: { 'Authorization': 'Bearer ' + bearerToken }
+}
 
 // Type definitions define the "shape" of your data and specify
 // which ways the data can be fetched from the GraphQL server.
@@ -23,10 +26,14 @@ const typeDefs = gql`
   type Track {
     name: String!
     popularity: Int
+    artists: [Artist]
   }
 
-  # The "Query" type is the root of all GraphQL queries.
-  # (A "Mutation" type will be covered later on.)
+  type Artist {
+    name: String
+    genres: [String]
+  }
+
   type Query {
     playlists: [Playlist]
   }
@@ -36,22 +43,38 @@ const typeDefs = gql`
 // schema.
 const resolvers = {
   Playlist: {
-    async tracks() {
-      const instance = axios.create({
-        baseURL: 'https://api.spotify.com',
-        headers: {'Authorization': 'Bearer ' + bearerToken}
-      })
+     tracks: async(playlist) => {
+      const tracksUrl = playlist.tracks.href;
+      const result = await axios.get(tracksUrl, options);
+      return result.data.items;
+    }
+  },
+
+  Track: {
+    name: (trackItem) => {
+      return trackItem.track.name;
+    },
+    popularity: (trackItem => {
+      return trackItem.track.popularity
+    }),
+    artists: (trackItem) => {
+      return trackItem.track.artists;
+    }
+  },
+
+  Artist: {
+    genres: async function(artist) {
+      // const artistUrl = artist.href;
+      // const result = await axios.get(artistUrl, options);
+      axios.get(artist.href, options).then(res => res.data.genres);
+      // console.log(result.data.genres);
+      // return result.data.genres;
     }
   },
 
   Query: {
-    async playlists() {
-      console.log(bearerToken);
-      const instance = axios.create({
-        baseURL: 'https://api.spotify.com',
-        headers: {'Authorization': 'Bearer ' + bearerToken}
-      })
-      const result = await instance.get('/v1/me/playlists');
+    playlists: async() => {
+      const result = await axios.get('https://api.spotify.com/v1/me/playlists', options);
       return result.data.items;
     }
   },
