@@ -47,6 +47,12 @@ const resolvers = {
       const result = await axios.get(`${baseUrl}/playlists`, options);
       // console.log(result);
       return result.data.items;
+    },
+
+    getArtist: async(parent: any, args: any, context: any, info: any) => {
+      console.log('args: ' + JSON.stringify(args.artistUrl));
+      const result = await axios.get(args.artistUrl, options);
+      return result.data;
     }
   },
 };

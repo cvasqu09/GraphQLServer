@@ -2,6 +2,7 @@ import { gql } from 'apollo-server';
 
 export const ArtistType = gql`
   type Artist {
-    name: String
+    name: String!
     genres: [String]
+    href: String!
   }`

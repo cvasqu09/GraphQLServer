@@ -2,6 +2,12 @@ const { gql } = require('apollo-server');
 const axios = require('axios');
 const baseUrl = process.env.BASE_API_URL;
 
+export const resolvers = {
+  tracks: async(playlist: any) => {
+    const result = await axios.get(`${baseUrl}/tracks`);
+    return result.data.items;
+  }
+}
 
 export const PlaylistType = gql`
   type Playlist {
@@ -9,10 +15,3 @@ export const PlaylistType = gql`
     images: [Image]
     tracks: [Track]
   }`;
-
-export const resolvers = {
-  tracks: async(playlist: any) => {
-    const result = await axios.get(`${baseUrl}/tracks`);
-    return result.data.items;
-  }
-}
